@@ -8,6 +8,7 @@ import Checkbox from '../../../components/form/input/Checkbox';
 import Button from '../../../components/ui/button/Button';
 import { authApi } from '../../../api';
 import { DASHBOARD_ROUTE_URL } from '../../../constants/route-url.constant';
+import Alert from '../../../components/ui/alert/Alert';
 
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -61,10 +62,9 @@ export default function SignInForm() {
             <form onSubmit={handleSubmit}>
               <div className="space-y-6">
                 {error && (
-                  <div className="bg-error-50 dark:bg-error-900/20 text-error-600 dark:text-error-400 rounded-lg px-4 py-3 text-sm">
-                    {error}
-                  </div>
+                  <Alert variant="error" title="Error" message={error}></Alert>
                 )}
+
                 <div>
                   <Label>
                     Username <span className="text-error-500">*</span>{' '}
