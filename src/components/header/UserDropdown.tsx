@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { DropdownItem } from '../ui/dropdown/DropdownItem';
+import { useNavigate } from 'react-router';
 import { Dropdown } from '../ui/dropdown/Dropdown';
-import { Link, useNavigate } from 'react-router';
-import { authApi } from '../../services/api';
+import { SIGN_IN_ROUTE_URL } from '../../constants/route-url.constant';
+import { authApi } from '../../api';
 
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function UserDropdown() {
   function handleLogout() {
     authApi.signout();
 
-    navigate('/signin');
+    navigate(SIGN_IN_ROUTE_URL);
   }
   return (
     <div className="relative">
@@ -31,7 +31,9 @@ export default function UserDropdown() {
           <img src="/images/user/owner.jpeg" alt="User" />
         </span>
 
-        <span className="text-theme-sm mr-1 block font-medium">Leonaldo Jose</span>
+        <span className="text-theme-sm mr-1 block font-medium">
+          Leonaldo Jose
+        </span>
         <svg
           className={`stroke-gray-500 transition-transform duration-200 dark:stroke-gray-400 ${
             isOpen ? 'rotate-180' : ''
@@ -59,7 +61,7 @@ export default function UserDropdown() {
       >
         <div>
           <span className="text-theme-sm block font-medium text-gray-700 dark:text-gray-400">
-            Leonaldo Jose 
+            Leonaldo Jose
           </span>
           <span className="text-theme-xs mt-0.5 block text-gray-500 dark:text-gray-400">
             leonaldojose@gmail.com

@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { useNavigate } from 'react-router';
-import { EyeCloseIcon, EyeIcon } from '../../icons';
-import Label from '../form/Label';
-import Input from '../form/input/InputField';
-import Checkbox from '../form/input/Checkbox';
-import Button from '../ui/button/Button';
-import { authApi } from '../../services/api';
+import { EyeCloseIcon, EyeIcon } from '../../../icons';
+import Label from '../../../components/form/Label';
+import Input from '../../../components/form/input/InputField';
+import Checkbox from '../../../components/form/input/Checkbox';
+import Button from '../../../components/ui/button/Button';
+import { authApi } from '../../../api';
+import { DASHBOARD_ROUTE_URL } from '../../../constants/route-url.constant';
 
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,15 +30,11 @@ export default function SignInForm() {
         localStorage.setItem('authToken', response.token);
       }
 
-      if (response.user) {
-        localStorage.setItem('user', JSON.stringify(response.user));
-      }
-
       if (isChecked) {
         localStorage.setItem('rememberMe', 'true');
       }
 
-      navigate('/');
+      navigate(DASHBOARD_ROUTE_URL);
     } catch (err) {
       setError(
         err instanceof Error ? err.message : 'An error occurred during login'

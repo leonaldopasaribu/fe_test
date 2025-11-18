@@ -1,6 +1,6 @@
 import PageMeta from '../../components/common/PageMeta';
 import SignInLayout from './SignInLayout';
-import SignInForm from '../../components/auth/SignInForm';
+import SignInForm from './components/SignInForm';
 
 export default function SignIn() {
   return (

@@ -96,7 +96,7 @@
 
 @layer base {
   body {
-    @apply font-outfit relative z-1 bg-gray-50 text-base font-normal;
+    @apply font-outfit relative z-1 bg-gray-50 text-base font-normal dark:bg-gray-900;
   }
 }
 
