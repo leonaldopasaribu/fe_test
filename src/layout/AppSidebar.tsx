@@ -32,7 +32,7 @@ const navItems: NavItem[] = [
   },
   {
     icon: <TableIcon />,
-    name: 'Laporan Lalin',
+    name: 'Laporan Lalu Lintas',
     subItems: [{ name: 'Laporan Per Hari', path: '/basic-tables', pro: false }],
   },
   {

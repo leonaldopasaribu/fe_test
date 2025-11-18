@@ -178,7 +178,7 @@ const Pagination: React.FC<PaginationProps> = ({
           <button
             onClick={handlePrevious}
             disabled={currentPage === 1}
-            className="group relative inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition-all hover:bg-white hover:text-indigo-600 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-600 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-indigo-400 dark:disabled:hover:text-slate-400"
+            className="group relative inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-slate-600 transition-all hover:bg-white hover:text-indigo-600 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-600 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-indigo-400 dark:disabled:hover:text-slate-400"
           >
             <svg
               className="h-5 w-5"
@@ -211,7 +211,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 <button
                   key={page}
                   onClick={() => onPageChange(page as number)}
-                  className={`inline-flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold transition-all ${
+                  className={`inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-sm font-semibold transition-all ${
                     currentPage === page
                       ? 'scale-105 bg-linear-to-br from-indigo-500 to-indigo-600 text-white shadow-md shadow-indigo-500/20'
                       : 'text-slate-600 hover:scale-105 hover:bg-white hover:text-indigo-600 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-indigo-400'
@@ -226,7 +226,7 @@ const Pagination: React.FC<PaginationProps> = ({
           <button
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className="group relative inline-flex h-9 w-9 items-center justify-center rounded-lg text-slate-600 transition-all hover:bg-white hover:text-indigo-600 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-600 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-indigo-400 dark:disabled:hover:text-slate-400"
+            className="group relative inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-slate-600 transition-all hover:bg-white hover:text-indigo-600 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-600 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-indigo-400 dark:disabled:hover:text-slate-400"
           >
             <svg
               className="h-5 w-5"

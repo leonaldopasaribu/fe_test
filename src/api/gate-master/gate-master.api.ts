@@ -8,14 +8,16 @@ import type {
 export const gateMasterApi = {
   fetchAll: async (
     page: number = 1,
-    limit: number = 10
+    limit: number = 10,
+    searchQuery?: string
   ): Promise<GateMasterResponse> => {
-    const result: GateMasterResponse = await apiClient(
-      `/gerbangs?page=${page}&limit=${limit}`,
-      {
-        requiresAuth: true,
-      }
-    );
+    let url = `/gerbangs?page=${page}&limit=${limit}`;
+    if (searchQuery && searchQuery.trim() !== '') {
+      url += `&NamaGerbang=${encodeURIComponent(searchQuery)}`;
+    }
+    const result: GateMasterResponse = await apiClient(url, {
+      requiresAuth: true,
+    });
     return result;
   },
 
