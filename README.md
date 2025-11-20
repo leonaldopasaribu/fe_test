@@ -2,6 +2,8 @@
 
 A modern web application for traffic and gate management built with React, TypeScript, and Vite. This system provides an intuitive interface for monitoring and managing traffic data and gate operations.
 
+> **Note:** This project is built using the [TailAdmin React Template](https://react-demo.tailadmin.com/) - a professional admin dashboard template with TailwindCSS.
+
 ## 📸 Demo
 
 ### 1. Sign In Page
@@ -22,7 +24,7 @@ A modern web application for traffic and gate management built with React, TypeS
 - 📊 **Dashboard** - Real-time monitoring and analytics
 - 🚗 **Traffic Management** - Comprehensive traffic data tracking
 - 🚧 **Gate Master** - Gate operations and management
-- 🎨 **Modern UI** - Built with Chakra UI and TailwindCSS
+- 🎨 **Modern UI** - Built with TailwindCSS
 - 🌙 **Dark Mode** - Theme switching support
 - 📱 **Responsive Design** - Mobile-friendly interface
 - ⚡ **Fast Performance** - Powered by Vite
@@ -36,8 +38,6 @@ A modern web application for traffic and gate management built with React, TypeS
 
 ### Styling
 - **TailwindCSS 4** - Utility-first CSS framework
-- **Chakra UI** - Component library
-- **Emotion** - CSS-in-JS
 
 ### Routing & State
 - **React Router 7** - Client-side routing
@@ -163,7 +163,7 @@ pnpm format:check
 
 1. **Component Structure**: Follow the established component structure in `src/components`
 2. **TypeScript**: Use proper TypeScript types and interfaces
-3. **Styling**: Use TailwindCSS utility classes and Chakra UI components
+3. **Styling**: Use TailwindCSS utility classes
 4. **API Integration**: Place API calls in the `src/api` directory
 5. **Testing**: Write tests for critical components and functions
 6. **Code Formatting**: Run `pnpm format` before committing
@@ -176,8 +176,8 @@ pnpm format:check
 
 ## 🙏 Acknowledgments
 
+- UI Template: [TailAdmin React](https://react-demo.tailadmin.com/) - Professional admin dashboard template
 - Built with [Vite](https://vitejs.dev/)
-- UI components from [Chakra UI](https://chakra-ui.com/)
 - Styled with [TailwindCSS](https://tailwindcss.com/)
 - Icons from [Lucide React](https://lucide.dev/)
 
